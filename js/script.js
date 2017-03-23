@@ -2,7 +2,7 @@ var color = ["red", "blue", "black"];
 var i = 0;
 $(document).ready(function () {
     $("p").click(function () {
-        setColor($(this));
+        setColor(this);
     })
 });
 function setColor(obj) {
@@ -12,4 +12,5 @@ function setColor(obj) {
     } else {
         i = 0;
     }
+    return color[i];
 }
