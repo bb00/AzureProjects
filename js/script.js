@@ -2,12 +2,12 @@ var color = ["red", "blue", "black"];
 var i = 0;
 $(document).ready(function () {
     $("p").click(function () {
-        setColor();
+        setColor($(this));
     })
 });
-function setColor() {
-    $(this).css("color", color[i])
-    if( i < 2) {
+function setColor(obj) {
+    obj.css("color", color[i].toString());
+    if(i < 2) {
         i++;
     } else {
         i = 0;
